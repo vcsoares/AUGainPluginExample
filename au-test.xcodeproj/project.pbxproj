@@ -13,7 +13,42 @@
 		A9816B372450BCB000A3AA83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9816B352450BCB000A3AA83 /* Main.storyboard */; };
 		A9816B392450BCB400A3AA83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9816B382450BCB400A3AA83 /* Assets.xcassets */; };
 		A9816B3C2450BCB400A3AA83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9816B3A2450BCB400A3AA83 /* LaunchScreen.storyboard */; };
+		A9816B4C2450D71200A3AA83 /* appexAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = A9816B4B2450D71200A3AA83 /* appexAudioUnit.m */; };
+		A9816B502450D71200A3AA83 /* DSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = A9816B4F2450D71200A3AA83 /* DSPKernel.hpp */; };
+		A9816B522450D71200A3AA83 /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = A9816B512450D71200A3AA83 /* DSPKernel.mm */; };
+		A9816B542450D71200A3AA83 /* BufferedAudioBus.hpp in Resources */ = {isa = PBXBuildFile; fileRef = A9816B532450D71200A3AA83 /* BufferedAudioBus.hpp */; };
+		A9816B572450D71200A3AA83 /* appexDSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = A9816B562450D71200A3AA83 /* appexDSPKernel.hpp */; };
+		A9816B592450D71200A3AA83 /* appexDSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = A9816B582450D71200A3AA83 /* appexDSPKernel.mm */; };
+		A9816B5C2450D71200A3AA83 /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9816B5B2450D71200A3AA83 /* AudioUnitViewController.swift */; };
+		A9816B5E2450D71200A3AA83 /* appexAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9816B5D2450D71200A3AA83 /* appexAudioUnit.swift */; };
+		A9816B602450D71200A3AA83 /* appexParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9816B5F2450D71200A3AA83 /* appexParameters.swift */; };
+		A9816B642450D71200A3AA83 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9816B622450D71200A3AA83 /* MainInterface.storyboard */; };
+		A9816B682450D71200A3AA83 /* appex.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A9816B472450D71200A3AA83 /* appex.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9816B662450D71200A3AA83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9816B242450BCB000A3AA83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9816B462450D71200A3AA83;
+			remoteInfo = appex;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A9816B6C2450D71200A3AA83 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A9816B682450D71200A3AA83 /* appex.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A9816B2C2450BCB000A3AA83 /* au-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "au-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +59,32 @@
 		A9816B382450BCB400A3AA83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9816B3B2450BCB400A3AA83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9816B3D2450BCB400A3AA83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9816B472450D71200A3AA83 /* appex.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = appex.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9816B4A2450D71200A3AA83 /* appexAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = appexAudioUnit.h; sourceTree = "<group>"; };
+		A9816B4B2450D71200A3AA83 /* appexAudioUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appexAudioUnit.m; sourceTree = "<group>"; };
+		A9816B4F2450D71200A3AA83 /* DSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DSPKernel.hpp; sourceTree = "<group>"; };
+		A9816B512450D71200A3AA83 /* DSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DSPKernel.mm; sourceTree = "<group>"; };
+		A9816B532450D71200A3AA83 /* BufferedAudioBus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BufferedAudioBus.hpp; sourceTree = "<group>"; };
+		A9816B552450D71200A3AA83 /* appexDSPKernelAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = appexDSPKernelAdapter.h; sourceTree = "<group>"; };
+		A9816B562450D71200A3AA83 /* appexDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = appexDSPKernel.hpp; sourceTree = "<group>"; };
+		A9816B582450D71200A3AA83 /* appexDSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = appexDSPKernel.mm; sourceTree = "<group>"; };
+		A9816B5B2450D71200A3AA83 /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
+		A9816B5D2450D71200A3AA83 /* appexAudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = appexAudioUnit.swift; path = "Audio Unit/appexAudioUnit.swift"; sourceTree = "<group>"; };
+		A9816B5F2450D71200A3AA83 /* appexParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = appexParameters.swift; path = "Audio Unit/appexParameters.swift"; sourceTree = "<group>"; };
+		A9816B612450D71200A3AA83 /* appex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "appex-Bridging-Header.h"; sourceTree = "<group>"; };
+		A9816B632450D71200A3AA83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A9816B652450D71200A3AA83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A9816B292450BCB000A3AA83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9816B442450D71200A3AA83 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				A9816B2E2450BCB000A3AA83 /* au-test */,
+				A9816B482450D71200A3AA83 /* appex */,
 				A9816B2D2450BCB000A3AA83 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				A9816B2C2450BCB000A3AA83 /* au-test.app */,
+				A9816B472450D71200A3AA83 /* appex.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +126,59 @@
 			path = "au-test";
 			sourceTree = "<group>";
 		};
+		A9816B482450D71200A3AA83 /* appex */ = {
+			isa = PBXGroup;
+			children = (
+				A9816B5D2450D71200A3AA83 /* appexAudioUnit.swift */,
+				A9816B5F2450D71200A3AA83 /* appexParameters.swift */,
+				A9816B612450D71200A3AA83 /* appex-Bridging-Header.h */,
+				A9816B622450D71200A3AA83 /* MainInterface.storyboard */,
+				A9816B652450D71200A3AA83 /* Info.plist */,
+				A9816B492450D71200A3AA83 /* Audio Unit */,
+				A9816B4D2450D71200A3AA83 /* DSP */,
+				A9816B5A2450D71200A3AA83 /* UI */,
+			);
+			path = appex;
+			sourceTree = "<group>";
+		};
+		A9816B492450D71200A3AA83 /* Audio Unit */ = {
+			isa = PBXGroup;
+			children = (
+				A9816B4A2450D71200A3AA83 /* appexAudioUnit.h */,
+				A9816B4B2450D71200A3AA83 /* appexAudioUnit.m */,
+			);
+			path = "Audio Unit";
+			sourceTree = "<group>";
+		};
+		A9816B4D2450D71200A3AA83 /* DSP */ = {
+			isa = PBXGroup;
+			children = (
+				A9816B562450D71200A3AA83 /* appexDSPKernel.hpp */,
+				A9816B582450D71200A3AA83 /* appexDSPKernel.mm */,
+				A9816B4E2450D71200A3AA83 /* Helpers */,
+			);
+			path = DSP;
+			sourceTree = "<group>";
+		};
+		A9816B4E2450D71200A3AA83 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A9816B4F2450D71200A3AA83 /* DSPKernel.hpp */,
+				A9816B512450D71200A3AA83 /* DSPKernel.mm */,
+				A9816B532450D71200A3AA83 /* BufferedAudioBus.hpp */,
+				A9816B552450D71200A3AA83 /* appexDSPKernelAdapter.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A9816B5A2450D71200A3AA83 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A9816B5B2450D71200A3AA83 /* AudioUnitViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +189,34 @@
 				A9816B282450BCB000A3AA83 /* Sources */,
 				A9816B292450BCB000A3AA83 /* Frameworks */,
 				A9816B2A2450BCB000A3AA83 /* Resources */,
+				A9816B6C2450D71200A3AA83 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A9816B672450D71200A3AA83 /* PBXTargetDependency */,
 			);
 			name = "au-test";
 			productName = "au-test";
 			productReference = A9816B2C2450BCB000A3AA83 /* au-test.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A9816B462450D71200A3AA83 /* appex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9816B692450D71200A3AA83 /* Build configuration list for PBXNativeTarget "appex" */;
+			buildPhases = (
+				A9816B432450D71200A3AA83 /* Sources */,
+				A9816B442450D71200A3AA83 /* Frameworks */,
+				A9816B452450D71200A3AA83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = appex;
+			productName = appex;
+			productReference = A9816B472450D71200A3AA83 /* appex.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +229,9 @@
 				ORGANIZATIONNAME = "Vinícius Chagas";
 				TargetAttributes = {
 					A9816B2B2450BCB000A3AA83 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					A9816B462450D71200A3AA83 = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
 				};
@@ -116,6 +250,7 @@
 			projectRoot = "";
 			targets = (
 				A9816B2B2450BCB000A3AA83 /* au-test */,
+				A9816B462450D71200A3AA83 /* appex */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +263,17 @@
 				A9816B3C2450BCB400A3AA83 /* LaunchScreen.storyboard in Resources */,
 				A9816B392450BCB400A3AA83 /* Assets.xcassets in Resources */,
 				A9816B372450BCB000A3AA83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9816B452450D71200A3AA83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9816B502450D71200A3AA83 /* DSPKernel.hpp in Resources */,
+				A9816B642450D71200A3AA83 /* MainInterface.storyboard in Resources */,
+				A9816B542450D71200A3AA83 /* BufferedAudioBus.hpp in Resources */,
+				A9816B572450D71200A3AA83 /* appexDSPKernel.hpp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +290,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9816B432450D71200A3AA83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9816B522450D71200A3AA83 /* DSPKernel.mm in Sources */,
+				A9816B5C2450D71200A3AA83 /* AudioUnitViewController.swift in Sources */,
+				A9816B602450D71200A3AA83 /* appexParameters.swift in Sources */,
+				A9816B592450D71200A3AA83 /* appexDSPKernel.mm in Sources */,
+				A9816B5E2450D71200A3AA83 /* appexAudioUnit.swift in Sources */,
+				A9816B4C2450D71200A3AA83 /* appexAudioUnit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9816B672450D71200A3AA83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9816B462450D71200A3AA83 /* appex */;
+			targetProxy = A9816B662450D71200A3AA83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A9816B352450BCB000A3AA83 /* Main.storyboard */ = {
@@ -161,6 +328,14 @@
 				A9816B3B2450BCB400A3AA83 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A9816B622450D71200A3AA83 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9816B632450D71200A3AA83 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -283,6 +458,7 @@
 		A9816B412450BCB400A3AA83 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VWQ6K2W3PY;
@@ -301,6 +477,7 @@
 		A9816B422450BCB400A3AA83 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VWQ6K2W3PY;
@@ -311,6 +488,46 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A9816B6A2450D71200A3AA83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VWQ6K2W3PY;
+				INFOPLIST_FILE = appex/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test.appex";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "appex/appex-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A9816B6B2450D71200A3AA83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VWQ6K2W3PY;
+				INFOPLIST_FILE = appex/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test.appex";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "appex/appex-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,6 +550,15 @@
 			buildConfigurations = (
 				A9816B412450BCB400A3AA83 /* Debug */,
 				A9816B422450BCB400A3AA83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9816B692450D71200A3AA83 /* Build configuration list for PBXNativeTarget "appex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9816B6A2450D71200A3AA83 /* Debug */,
+				A9816B6B2450D71200A3AA83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
