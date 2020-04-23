@@ -13,17 +13,27 @@
 		A9816B372450BCB000A3AA83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9816B352450BCB000A3AA83 /* Main.storyboard */; };
 		A9816B392450BCB400A3AA83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9816B382450BCB400A3AA83 /* Assets.xcassets */; };
 		A9816B3C2450BCB400A3AA83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9816B3A2450BCB400A3AA83 /* LaunchScreen.storyboard */; };
-		A9816B4C2450D71200A3AA83 /* appexAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = A9816B4B2450D71200A3AA83 /* appexAudioUnit.m */; };
 		A9816B502450D71200A3AA83 /* DSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = A9816B4F2450D71200A3AA83 /* DSPKernel.hpp */; };
-		A9816B522450D71200A3AA83 /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = A9816B512450D71200A3AA83 /* DSPKernel.mm */; };
 		A9816B542450D71200A3AA83 /* BufferedAudioBus.hpp in Resources */ = {isa = PBXBuildFile; fileRef = A9816B532450D71200A3AA83 /* BufferedAudioBus.hpp */; };
 		A9816B572450D71200A3AA83 /* appexDSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = A9816B562450D71200A3AA83 /* appexDSPKernel.hpp */; };
-		A9816B592450D71200A3AA83 /* appexDSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = A9816B582450D71200A3AA83 /* appexDSPKernel.mm */; };
-		A9816B5C2450D71200A3AA83 /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9816B5B2450D71200A3AA83 /* AudioUnitViewController.swift */; };
-		A9816B5E2450D71200A3AA83 /* appexAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9816B5D2450D71200A3AA83 /* appexAudioUnit.swift */; };
-		A9816B602450D71200A3AA83 /* appexParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9816B5F2450D71200A3AA83 /* appexParameters.swift */; };
 		A9816B642450D71200A3AA83 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9816B622450D71200A3AA83 /* MainInterface.storyboard */; };
 		A9816B682450D71200A3AA83 /* appex.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A9816B472450D71200A3AA83 /* appex.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A9831AF02452133E003C3E0C /* au_framework.h in Headers */ = {isa = PBXBuildFile; fileRef = A9831AEE2452133E003C3E0C /* au_framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9831AF32452133E003C3E0C /* au_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* au_framework.framework */; };
+		A9831AF42452133E003C3E0C /* au_framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* au_framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9831AF92452140D003C3E0C /* appexDSPKernelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = A9816B552450D71200A3AA83 /* appexDSPKernelAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9831AFB245214B9003C3E0C /* au_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* au_framework.framework */; };
+		A9831AFC245214B9003C3E0C /* au_framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* au_framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9831B012452153F003C3E0C /* appexAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9816B5D2450D71200A3AA83 /* appexAudioUnit.swift */; };
+		A9831B0324521562003C3E0C /* appexAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = A9816B4B2450D71200A3AA83 /* appexAudioUnit.m */; };
+		A9831B0424521565003C3E0C /* appexDSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = A9816B582450D71200A3AA83 /* appexDSPKernel.mm */; };
+		A9831B0524521569003C3E0C /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = A9816B512450D71200A3AA83 /* DSPKernel.mm */; };
+		A9831B062452159E003C3E0C /* appexAudioUnit.h in Headers */ = {isa = PBXBuildFile; fileRef = A9816B4A2450D71200A3AA83 /* appexAudioUnit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9831B07245215A0003C3E0C /* appexDSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A9816B562450D71200A3AA83 /* appexDSPKernel.hpp */; };
+		A9831B08245215A6003C3E0C /* DSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A9816B4F2450D71200A3AA83 /* DSPKernel.hpp */; };
+		A9831B09245215AA003C3E0C /* BufferedAudioBus.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A9816B532450D71200A3AA83 /* BufferedAudioBus.hpp */; };
+		A9831B0A245215DB003C3E0C /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9816B5B2450D71200A3AA83 /* AudioUnitViewController.swift */; };
+		A9831B0C2452187F003C3E0C /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9831B0B2452187F003C3E0C /* AudioUnitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +43,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = A9816B462450D71200A3AA83;
 			remoteInfo = appex;
+		};
+		A9831AF12452133E003C3E0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9816B242450BCB000A3AA83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9831AEB2452133E003C3E0C;
+			remoteInfo = "au-framework";
+		};
+		A9831AFD245214B9003C3E0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9816B242450BCB000A3AA83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9831AEB2452133E003C3E0C;
+			remoteInfo = "au-framework";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -46,6 +70,28 @@
 				A9816B682450D71200A3AA83 /* appex.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9831AF82452133E003C3E0C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A9831AF42452133E003C3E0C /* au_framework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9831AFF245214B9003C3E0C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A9831AFC245214B9003C3E0C /* au_framework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -69,11 +115,13 @@
 		A9816B562450D71200A3AA83 /* appexDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = appexDSPKernel.hpp; sourceTree = "<group>"; };
 		A9816B582450D71200A3AA83 /* appexDSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = appexDSPKernel.mm; sourceTree = "<group>"; };
 		A9816B5B2450D71200A3AA83 /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
-		A9816B5D2450D71200A3AA83 /* appexAudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = appexAudioUnit.swift; path = "Audio Unit/appexAudioUnit.swift"; sourceTree = "<group>"; };
-		A9816B5F2450D71200A3AA83 /* appexParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = appexParameters.swift; path = "Audio Unit/appexParameters.swift"; sourceTree = "<group>"; };
-		A9816B612450D71200A3AA83 /* appex-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "appex-Bridging-Header.h"; sourceTree = "<group>"; };
+		A9816B5D2450D71200A3AA83 /* appexAudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appexAudioUnit.swift; sourceTree = "<group>"; };
 		A9816B632450D71200A3AA83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		A9816B652450D71200A3AA83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9831AEC2452133E003C3E0C /* au_framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = au_framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9831AEE2452133E003C3E0C /* au_framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = au_framework.h; sourceTree = "<group>"; };
+		A9831AEF2452133E003C3E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9831B0B2452187F003C3E0C /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +129,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9831AF32452133E003C3E0C /* au_framework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A9816B442450D71200A3AA83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9831AFB245214B9003C3E0C /* au_framework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9831AE92452133E003C3E0C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,8 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				A9816B2E2450BCB000A3AA83 /* au-test */,
+				A9831AED2452133E003C3E0C /* au-framework */,
 				A9816B482450D71200A3AA83 /* appex */,
 				A9816B2D2450BCB000A3AA83 /* Products */,
+				A9831AFA245214B9003C3E0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +167,7 @@
 			children = (
 				A9816B2C2450BCB000A3AA83 /* au-test.app */,
 				A9816B472450D71200A3AA83 /* appex.appex */,
+				A9831AEC2452133E003C3E0C /* au_framework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,13 +189,8 @@
 		A9816B482450D71200A3AA83 /* appex */ = {
 			isa = PBXGroup;
 			children = (
-				A9816B5D2450D71200A3AA83 /* appexAudioUnit.swift */,
-				A9816B5F2450D71200A3AA83 /* appexParameters.swift */,
-				A9816B612450D71200A3AA83 /* appex-Bridging-Header.h */,
 				A9816B622450D71200A3AA83 /* MainInterface.storyboard */,
 				A9816B652450D71200A3AA83 /* Info.plist */,
-				A9816B492450D71200A3AA83 /* Audio Unit */,
-				A9816B4D2450D71200A3AA83 /* DSP */,
 				A9816B5A2450D71200A3AA83 /* UI */,
 			);
 			path = appex;
@@ -179,7 +234,43 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		A9831AED2452133E003C3E0C /* au-framework */ = {
+			isa = PBXGroup;
+			children = (
+				A9831B0B2452187F003C3E0C /* AudioUnitViewController.swift */,
+				A9816B4D2450D71200A3AA83 /* DSP */,
+				A9816B492450D71200A3AA83 /* Audio Unit */,
+				A9816B5D2450D71200A3AA83 /* appexAudioUnit.swift */,
+				A9831AEE2452133E003C3E0C /* au_framework.h */,
+				A9831AEF2452133E003C3E0C /* Info.plist */,
+			);
+			path = "au-framework";
+			sourceTree = "<group>";
+		};
+		A9831AFA245214B9003C3E0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A9831AE72452133E003C3E0C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9831AF92452140D003C3E0C /* appexDSPKernelAdapter.h in Headers */,
+				A9831B08245215A6003C3E0C /* DSPKernel.hpp in Headers */,
+				A9831AF02452133E003C3E0C /* au_framework.h in Headers */,
+				A9831B07245215A0003C3E0C /* appexDSPKernel.hpp in Headers */,
+				A9831B062452159E003C3E0C /* appexAudioUnit.h in Headers */,
+				A9831B09245215AA003C3E0C /* BufferedAudioBus.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		A9816B2B2450BCB000A3AA83 /* au-test */ = {
@@ -190,11 +281,13 @@
 				A9816B292450BCB000A3AA83 /* Frameworks */,
 				A9816B2A2450BCB000A3AA83 /* Resources */,
 				A9816B6C2450D71200A3AA83 /* Embed App Extensions */,
+				A9831AF82452133E003C3E0C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				A9816B672450D71200A3AA83 /* PBXTargetDependency */,
+				A9831AF22452133E003C3E0C /* PBXTargetDependency */,
 			);
 			name = "au-test";
 			productName = "au-test";
@@ -208,15 +301,35 @@
 				A9816B432450D71200A3AA83 /* Sources */,
 				A9816B442450D71200A3AA83 /* Frameworks */,
 				A9816B452450D71200A3AA83 /* Resources */,
+				A9831AFF245214B9003C3E0C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A9831AFE245214B9003C3E0C /* PBXTargetDependency */,
 			);
 			name = appex;
 			productName = appex;
 			productReference = A9816B472450D71200A3AA83 /* appex.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		A9831AEB2452133E003C3E0C /* au-framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9831AF52452133E003C3E0C /* Build configuration list for PBXNativeTarget "au-framework" */;
+			buildPhases = (
+				A9831AE72452133E003C3E0C /* Headers */,
+				A9831AE82452133E003C3E0C /* Sources */,
+				A9831AE92452133E003C3E0C /* Frameworks */,
+				A9831AEA2452133E003C3E0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "au-framework";
+			productName = "au-framework";
+			productReference = A9831AEC2452133E003C3E0C /* au_framework.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -232,6 +345,9 @@
 						CreatedOnToolsVersion = 11.4.1;
 					};
 					A9816B462450D71200A3AA83 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					A9831AEB2452133E003C3E0C = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
 				};
@@ -251,6 +367,7 @@
 			targets = (
 				A9816B2B2450BCB000A3AA83 /* au-test */,
 				A9816B462450D71200A3AA83 /* appex */,
+				A9831AEB2452133E003C3E0C /* au-framework */,
 			);
 		};
 /* End PBXProject section */
@@ -277,6 +394,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9831AEA2452133E003C3E0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -294,12 +418,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9816B522450D71200A3AA83 /* DSPKernel.mm in Sources */,
-				A9816B5C2450D71200A3AA83 /* AudioUnitViewController.swift in Sources */,
-				A9816B602450D71200A3AA83 /* appexParameters.swift in Sources */,
-				A9816B592450D71200A3AA83 /* appexDSPKernel.mm in Sources */,
-				A9816B5E2450D71200A3AA83 /* appexAudioUnit.swift in Sources */,
-				A9816B4C2450D71200A3AA83 /* appexAudioUnit.m in Sources */,
+				A9831B0A245215DB003C3E0C /* AudioUnitViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9831AE82452133E003C3E0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9831B0524521569003C3E0C /* DSPKernel.mm in Sources */,
+				A9831B0424521565003C3E0C /* appexDSPKernel.mm in Sources */,
+				A9831B012452153F003C3E0C /* appexAudioUnit.swift in Sources */,
+				A9831B0324521562003C3E0C /* appexAudioUnit.m in Sources */,
+				A9831B0C2452187F003C3E0C /* AudioUnitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +441,16 @@
 			isa = PBXTargetDependency;
 			target = A9816B462450D71200A3AA83 /* appex */;
 			targetProxy = A9816B662450D71200A3AA83 /* PBXContainerItemProxy */;
+		};
+		A9831AF22452133E003C3E0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9831AEB2452133E003C3E0C /* au-framework */;
+			targetProxy = A9831AF12452133E003C3E0C /* PBXContainerItemProxy */;
+		};
+		A9831AFE245214B9003C3E0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9831AEB2452133E003C3E0C /* au-framework */;
+			targetProxy = A9831AFD245214B9003C3E0C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -398,6 +539,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 			};
 			name = Debug;
 		};
@@ -451,6 +593,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -469,6 +612,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -488,6 +632,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -507,7 +652,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test.appex";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "appex/appex-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -527,9 +672,63 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test.appex";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "appex/appex-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A9831AF62452133E003C3E0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VWQ6K2W3PY;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "au-framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-framework";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A9831AF72452133E003C3E0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VWQ6K2W3PY;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "au-framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-framework";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -559,6 +758,15 @@
 			buildConfigurations = (
 				A9816B6A2450D71200A3AA83 /* Debug */,
 				A9816B6B2450D71200A3AA83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9831AF52452133E003C3E0C /* Build configuration list for PBXNativeTarget "au-framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9831AF62452133E003C3E0C /* Debug */,
+				A9831AF72452133E003C3E0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
