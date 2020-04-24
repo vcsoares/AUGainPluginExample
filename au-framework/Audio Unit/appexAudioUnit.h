@@ -10,11 +10,12 @@
 #import "appexDSPKernelAdapter.h"
 
 // Define parameter addresses.
-extern const AudioUnitParameterID myParam1;
+extern const AudioUnitParameterID frequency;
 
 @interface appexAudioUnit : AUAudioUnit
 
 @property (nonatomic, readonly) appexDSPKernelAdapter *kernelAdapter;
+@property (weak) AudioUnitViewController *viewController;
 - (void)setupAudioBuses;
 - (void)setupParameterTree;
 - (void)setupParameterCallbacks;

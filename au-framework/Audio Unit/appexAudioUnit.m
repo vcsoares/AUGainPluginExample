@@ -11,7 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 
 // Define parameter addresses.
-const AudioUnitParameterID myParam1 = 0;
+const AudioUnitParameterID frequency = 0;
 
 @interface appexAudioUnit ()
 
@@ -53,22 +53,22 @@ const AudioUnitParameterID myParam1 = 0;
 
 - (void)setupParameterTree {
     // Create parameter objects.
-    AUParameter *param1 = [AUParameterTree createParameterWithIdentifier:@"param1"
-																	name:@"Parameter 1"
-																 address:myParam1
-																	 min:0
-																	 max:100
-																	unit:kAudioUnitParameterUnit_Percent
+    AUParameter *pFrequency = [AUParameterTree createParameterWithIdentifier:@"frequency"
+																	name:@"Frequency"
+																 address:frequency
+																	 min:15
+																	 max:45
+																	unit:kAudioUnitParameterUnit_Hertz
 																unitName:nil
 																   flags:0
 															valueStrings:nil
 													 dependentParameters:nil];
 
     // Initialize the parameter values.
-    param1.value = 0.5;
+    pFrequency.value = 22;
 
     // Create the parameter tree.
-    _parameterTree = [AUParameterTree createTreeWithChildren:@[ param1 ]];
+    _parameterTree = [AUParameterTree createTreeWithChildren:@[ pFrequency ]];
 }
 
 - (void)setupParameterCallbacks {
