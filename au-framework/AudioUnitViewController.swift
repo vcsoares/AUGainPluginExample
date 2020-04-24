@@ -41,7 +41,7 @@ public class AudioUnitViewController: AUViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        if audioUnit == nil {
+        guard audioUnit != nil else {
             print("audio unit = nil")
             return
         }

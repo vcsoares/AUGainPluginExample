@@ -7,7 +7,24 @@
 //
 
 import UIKit
+import AVFoundation
 import au_framework
+
+// The AudioComponentDescription matching the AUv3FilterExtension Info.plist
+private var componentDescription: AudioComponentDescription = {
+
+    // Ensure that AudioUnit type, subtype, and manufacturer match the extension's Info.plist values
+    var componentDescription = AudioComponentDescription()
+    componentDescription.componentType = kAudioUnitType_Effect
+    componentDescription.componentSubType = 0x666c7472 /*'fltr'*/
+    componentDescription.componentManufacturer = 0x564e4353 /*'VNCS'*/
+    componentDescription.componentFlags = 0
+    componentDescription.componentFlagsMask = 0
+
+    return componentDescription
+}()
+
+private let componentName = "VNCS: appex"
 
 class ViewController: UIViewController {
 
@@ -23,7 +40,19 @@ class ViewController: UIViewController {
 
         let storyboard = UIStoryboard(name: "MainInterface", bundle: appexBundle)
         guard let controller = storyboard.instantiateInitialViewController() as? AudioUnitViewController else {
-            fatalError("Unable to instantiate AUv3FilterDemoViewController")
+            fatalError("Unable to instantiate AudioUnitViewController")
+        }
+        
+        AUAudioUnit.registerSubclass(appexAudioUnit.self,
+                                     as: componentDescription,
+                                     name: componentName,
+                                     version: UInt32.max)
+
+        AVAudioUnit.instantiate(with: componentDescription) { audioUnit, error in
+            guard error == nil, let audioUnit = audioUnit else {
+                fatalError("Could not instantiate audio unit: \(String(describing: error))")
+            }
+            controller.audioUnit = audioUnit.auAudioUnit as? appexAudioUnit
         }
         
         if let view = controller.view {
