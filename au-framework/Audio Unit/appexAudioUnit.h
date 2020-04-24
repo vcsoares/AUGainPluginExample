@@ -10,7 +10,7 @@
 #import "appexDSPKernelAdapter.h"
 
 // Define parameter addresses.
-extern const AudioUnitParameterID frequency;
+extern const AudioUnitParameterID gain;
 
 @interface appexAudioUnit : AUAudioUnit
 

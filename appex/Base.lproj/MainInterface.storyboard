@@ -20,15 +20,25 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aw1-qc-BzL" userLabel="Gain Slider">
+                                <rect key="frame" x="30" y="106.5" width="354" height="31"/>
+                                <connections>
+                                    <action selector="gainSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="E0f-Mo-mbn"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="aw1-qc-BzL" firstAttribute="top" secondItem="j5c-MY-xUb" secondAttribute="bottom" constant="22" id="2ML-OW-UrZ"/>
                             <constraint firstItem="j5c-MY-xUb" firstAttribute="centerX" secondItem="u2v-qu-mbu" secondAttribute="centerX" id="GEu-gu-ROi"/>
+                            <constraint firstItem="u2v-qu-mbu" firstAttribute="trailing" secondItem="aw1-qc-BzL" secondAttribute="trailing" constant="32" id="HQ9-mQ-kAU"/>
+                            <constraint firstItem="aw1-qc-BzL" firstAttribute="leading" secondItem="u2v-qu-mbu" secondAttribute="leading" constant="32" id="peH-R4-zCc"/>
                             <constraint firstItem="j5c-MY-xUb" firstAttribute="top" secondItem="u2v-qu-mbu" secondAttribute="top" constant="20" id="sbA-2i-4eA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u2v-qu-mbu"/>
                     </view>
                     <connections>
+                        <outlet property="gainSlider" destination="aw1-qc-BzL" id="kFT-ys-ceG"/>
                         <outlet property="paramLabel" destination="j5c-MY-xUb" id="X4L-dn-xkU"/>
                     </connections>
                 </viewController>

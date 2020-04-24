@@ -10,6 +10,11 @@ import CoreAudioKit
 
 public class AudioUnitViewController: AUViewController {
     @IBOutlet weak var paramLabel: UILabel!
+    @IBOutlet weak var gainSlider: UISlider!
+    
+    private var gainParameter: AUParameter!
+    
+    private var parameterObserverToken: AUParameterObserverToken?
     
     public var audioUnit: appexAudioUnit? {
         didSet {
@@ -48,11 +53,36 @@ public class AudioUnitViewController: AUViewController {
         print("[\(Date())] Entrando na função \t \(#function)")
         
         // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the AudioUnit
-        guard let freq = audioUnit?.parameterTree?.parameter(withAddress: AUParameterAddress(frequency)) else {
+        guard let gain = audioUnit?.parameterTree?.parameter(withAddress: AUParameterAddress(gain)) else {
             print("oops")
             return
         }
         
-        paramLabel.text = "Frequency: \(freq.value)"
+        gainParameter = gain
+        
+        // Observe value changes made to the cutoff and resonance parameters.
+        parameterObserverToken =
+            audioUnit?.parameterTree?.token(byAddingParameterObserver: { [weak self] address, value in
+                guard let self = self else { return }
+
+                // This closure is being called by an arbitrary queue. Ensure
+                // all UI updates are dispatched back to the main thread.
+                if [gain.address].contains(address) {
+                    DispatchQueue.main.async {
+                        self.updateUI()
+                    }
+                }
+            })
+        
+        updateUI()
+    }
+    
+    fileprivate func updateUI() {
+        paramLabel.text = "\(gainParameter.displayName): \(gainParameter.value)"
+    }
+    
+    @IBAction func gainSliderValueChanged(_ sender: UISlider) {
+        gainParameter.setValue(sender.value, originator: parameterObserverToken)
+        updateUI()
     }
 }

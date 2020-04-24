@@ -30,7 +30,6 @@ public:
     void init(int channelCount, double inSampleRate) {
         chanCount = channelCount;
         sampleRate = float(inSampleRate);
-//        fFrequency = frequency;
     }
 
     void reset() {
@@ -47,7 +46,7 @@ public:
     void setParameter(AUParameterAddress address, AUValue value) {
         switch (address) {
             case paramOne:
-                fFrequency = value;
+                fGain = value;
                 break;
         }
     }
@@ -56,7 +55,7 @@ public:
         switch (address) {
             case paramOne:
                 // Return the goal. It is not thread safe to return the ramping value.
-                return fFrequency;
+                return fGain;
             default: return 0.f;
         }
     }
@@ -95,8 +94,8 @@ public:
                 const int frameOffset = int(frameIndex + bufferOffset);
                 
                 // Do your sample by sample dsp here...
-                float time = frameCount / sampleRate;
-                out[frameOffset] = in[frameOffset] * fabs(sinf(M_PI * 2 * time * getParameter(paramOne)));
+                printf("%f\n", getParameter(paramOne));
+                out[frameOffset] = in[frameOffset] * getParameter(paramOne);
             }
         }
     }
@@ -111,7 +110,7 @@ private:
     AudioBufferList* outBufferListPtr = nullptr;
     
 public:
-    float fFrequency;
+    float fGain;
 };
 
 #endif /* appexDSPKernel_hpp */
