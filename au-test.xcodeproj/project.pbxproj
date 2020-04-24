@@ -24,7 +24,7 @@
 		A9831AF92452140D003C3E0C /* appexDSPKernelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = A9816B552450D71200A3AA83 /* appexDSPKernelAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9831AFB245214B9003C3E0C /* au_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* au_framework.framework */; };
 		A9831AFC245214B9003C3E0C /* au_framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* au_framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A9831B012452153F003C3E0C /* appexAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9816B5D2450D71200A3AA83 /* appexAudioUnit.swift */; };
+		A9831B012452153F003C3E0C /* AudioUnitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9816B5D2450D71200A3AA83 /* AudioUnitManager.swift */; };
 		A9831B0324521562003C3E0C /* appexAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = A9816B4B2450D71200A3AA83 /* appexAudioUnit.m */; };
 		A9831B0424521565003C3E0C /* appexDSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = A9816B582450D71200A3AA83 /* appexDSPKernel.mm */; };
 		A9831B0524521569003C3E0C /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = A9816B512450D71200A3AA83 /* DSPKernel.mm */; };
@@ -115,7 +115,7 @@
 		A9816B562450D71200A3AA83 /* appexDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = appexDSPKernel.hpp; sourceTree = "<group>"; };
 		A9816B582450D71200A3AA83 /* appexDSPKernel.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = appexDSPKernel.mm; sourceTree = "<group>"; };
 		A9816B5B2450D71200A3AA83 /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
-		A9816B5D2450D71200A3AA83 /* appexAudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appexAudioUnit.swift; sourceTree = "<group>"; };
+		A9816B5D2450D71200A3AA83 /* AudioUnitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitManager.swift; sourceTree = "<group>"; };
 		A9816B632450D71200A3AA83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		A9816B652450D71200A3AA83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9831AEC2452133E003C3E0C /* au_framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = au_framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				A9816B562450D71200A3AA83 /* appexDSPKernel.hpp */,
+				A9816B552450D71200A3AA83 /* appexDSPKernelAdapter.h */,
 				A9816B582450D71200A3AA83 /* appexDSPKernel.mm */,
 				A9816B4E2450D71200A3AA83 /* Helpers */,
 			);
@@ -221,7 +222,6 @@
 				A9816B4F2450D71200A3AA83 /* DSPKernel.hpp */,
 				A9816B512450D71200A3AA83 /* DSPKernel.mm */,
 				A9816B532450D71200A3AA83 /* BufferedAudioBus.hpp */,
-				A9816B552450D71200A3AA83 /* appexDSPKernelAdapter.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -237,10 +237,10 @@
 		A9831AED2452133E003C3E0C /* au-framework */ = {
 			isa = PBXGroup;
 			children = (
+				A9816B5D2450D71200A3AA83 /* AudioUnitManager.swift */,
 				A9831B0B2452187F003C3E0C /* AudioUnitViewController.swift */,
-				A9816B4D2450D71200A3AA83 /* DSP */,
 				A9816B492450D71200A3AA83 /* Audio Unit */,
-				A9816B5D2450D71200A3AA83 /* appexAudioUnit.swift */,
+				A9816B4D2450D71200A3AA83 /* DSP */,
 				A9831AEE2452133E003C3E0C /* au_framework.h */,
 				A9831AEF2452133E003C3E0C /* Info.plist */,
 			);
@@ -428,7 +428,7 @@
 			files = (
 				A9831B0524521569003C3E0C /* DSPKernel.mm in Sources */,
 				A9831B0424521565003C3E0C /* appexDSPKernel.mm in Sources */,
-				A9831B012452153F003C3E0C /* appexAudioUnit.swift in Sources */,
+				A9831B012452153F003C3E0C /* AudioUnitManager.swift in Sources */,
 				A9831B0324521562003C3E0C /* appexAudioUnit.m in Sources */,
 				A9831B0C2452187F003C3E0C /* AudioUnitViewController.swift in Sources */,
 			);
