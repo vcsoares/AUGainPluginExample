@@ -11,8 +11,10 @@
 
 #import "DSPKernel.hpp"
 
+// MARK: - PARAMETER ENUM
+
 enum {
-    paramOne = 0,
+    pGain = 0,
 };
 
 /*
@@ -21,9 +23,19 @@ enum {
  As a non-ObjC class, this is safe to use from render thread.
  */
 class appexDSPKernel : public DSPKernel {
-public:
+    // MARK: - Member Variables
+
+private:
+    int chanCount = 0;
+    float sampleRate = 44100.0;
+    bool bypassed = false;
+    AudioBufferList* inBufferListPtr = nullptr;
+    AudioBufferList* outBufferListPtr = nullptr;
     
-    // MARK: Member Functions
+public:
+    float fGain;
+    
+    // MARK: - Member Functions
 
     appexDSPKernel() {}
 
@@ -43,9 +55,11 @@ public:
         bypassed = shouldBypass;
     }
 
+    // MARK: - PARAMETER ACCESSORS
+    
     void setParameter(AUParameterAddress address, AUValue value) {
         switch (address) {
-            case paramOne:
+            case pGain:
                 fGain = value;
                 break;
         }
@@ -53,18 +67,20 @@ public:
 
     AUValue getParameter(AUParameterAddress address) {
         switch (address) {
-            case paramOne:
+            case pGain:
                 // Return the goal. It is not thread safe to return the ramping value.
                 return fGain;
             default: return 0.f;
         }
     }
-
+    
+    // MARK: - DSP CODE
+    
     void setBuffers(AudioBufferList* inBufferList, AudioBufferList* outBufferList) {
         inBufferListPtr = inBufferList;
         outBufferListPtr = outBufferList;
     }
-
+    
     void process(AUAudioFrameCount frameCount, AUAudioFrameCount bufferOffset) override {
         if (bypassed) {
             // Pass the samples through
@@ -93,24 +109,13 @@ public:
             for (int frameIndex = 0; frameIndex < frameCount; ++frameIndex) {
                 const int frameOffset = int(frameIndex + bufferOffset);
                 
-                // Do your sample by sample dsp here...
-                printf("%f\n", getParameter(paramOne));
-                out[frameOffset] = in[frameOffset] * getParameter(paramOne);
+                // MARK: - Do your sample by sample dsp here...
+                
+                printf("%f\n", getParameter(pGain));
+                out[frameOffset] = in[frameOffset] * getParameter(pGain);
             }
         }
     }
-
-    // MARK: Member Variables
-
-private:
-    int chanCount = 0;
-    float sampleRate = 44100.0;
-    bool bypassed = false;
-    AudioBufferList* inBufferListPtr = nullptr;
-    AudioBufferList* outBufferListPtr = nullptr;
-    
-public:
-    float fGain;
 };
 
 #endif /* appexDSPKernel_hpp */
