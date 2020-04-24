@@ -16,15 +16,15 @@ private var componentDescription: AudioComponentDescription = {
     // Ensure that AudioUnit type, subtype, and manufacturer match the extension's Info.plist values
     var componentDescription = AudioComponentDescription()
     componentDescription.componentType = kAudioUnitType_Effect
-    componentDescription.componentSubType = 0x666c7472 /*'fltr'*/
-    componentDescription.componentManufacturer = 0x564e4353 /*'VNCS'*/
+    componentDescription.componentSubType = 0x74657374 /*'test'*/
+    componentDescription.componentManufacturer = 0x44656d6f /*'Demo'*/
     componentDescription.componentFlags = 0
     componentDescription.componentFlagsMask = 0
 
     return componentDescription
 }()
 
-private let componentName = "VNCS: appex"
+private let componentName = "Demo: GainPlugin"
 
 class ViewController: UIViewController {
 
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        guard let url = Bundle.main.builtInPlugInsURL?.appendingPathComponent("appex.appex"),
+        guard let url = Bundle.main.builtInPlugInsURL?.appendingPathComponent("GainPlugin.appex"),
             let appexBundle = Bundle(url: url) else {
                 fatalError("Could not find app extension bundle URL.")
         }

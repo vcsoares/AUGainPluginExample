@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>appex</string>
+	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -28,13 +28,13 @@
 			<array>
 				<dict>
 					<key>description</key>
-					<string>appex</string>
+					<string>GainPlugin</string>
 					<key>factoryFunction</key>
 					<string>$(PRODUCT_MODULE_NAME).AudioUnitViewController</string>
 					<key>manufacturer</key>
-					<string>VNCS</string>
+					<string>Demo</string>
 					<key>name</key>
-					<string>VNCS: appex</string>
+					<string>Demo: GainPlugin</string>
 					<key>sandboxSafe</key>
 					<true/>
 					<key>subtype</key>

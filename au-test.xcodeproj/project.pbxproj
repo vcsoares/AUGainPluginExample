@@ -17,7 +17,7 @@
 		A9816B542450D71200A3AA83 /* BufferedAudioBus.hpp in Resources */ = {isa = PBXBuildFile; fileRef = A9816B532450D71200A3AA83 /* BufferedAudioBus.hpp */; };
 		A9816B572450D71200A3AA83 /* appexDSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = A9816B562450D71200A3AA83 /* appexDSPKernel.hpp */; };
 		A9816B642450D71200A3AA83 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9816B622450D71200A3AA83 /* MainInterface.storyboard */; };
-		A9816B682450D71200A3AA83 /* appex.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A9816B472450D71200A3AA83 /* appex.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A9816B682450D71200A3AA83 /* GainPlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A9816B472450D71200A3AA83 /* GainPlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A9831AF02452133E003C3E0C /* au_framework.h in Headers */ = {isa = PBXBuildFile; fileRef = A9831AEE2452133E003C3E0C /* au_framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9831AF32452133E003C3E0C /* au_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* au_framework.framework */; };
 		A9831AF42452133E003C3E0C /* au_framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* au_framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -66,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A9816B682450D71200A3AA83 /* appex.appex in Embed App Extensions */,
+				A9816B682450D71200A3AA83 /* GainPlugin.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,7 +96,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A9816B2C2450BCB000A3AA83 /* au-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "au-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9816B2C2450BCB000A3AA83 /* GainPlugin Standalone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GainPlugin Standalone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9816B2F2450BCB000A3AA83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9816B312450BCB000A3AA83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A9816B332450BCB000A3AA83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		A9816B382450BCB400A3AA83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9816B3B2450BCB400A3AA83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9816B3D2450BCB400A3AA83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9816B472450D71200A3AA83 /* appex.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = appex.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9816B472450D71200A3AA83 /* GainPlugin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GainPlugin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9816B4A2450D71200A3AA83 /* appexAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = appexAudioUnit.h; sourceTree = "<group>"; };
 		A9816B4B2450D71200A3AA83 /* appexAudioUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appexAudioUnit.m; sourceTree = "<group>"; };
 		A9816B4F2450D71200A3AA83 /* DSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DSPKernel.hpp; sourceTree = "<group>"; };
@@ -163,8 +163,8 @@
 		A9816B2D2450BCB000A3AA83 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9816B2C2450BCB000A3AA83 /* au-test.app */,
-				A9816B472450D71200A3AA83 /* appex.appex */,
+				A9816B2C2450BCB000A3AA83 /* GainPlugin Standalone.app */,
+				A9816B472450D71200A3AA83 /* GainPlugin.appex */,
 				A9831AEC2452133E003C3E0C /* au_framework.framework */,
 			);
 			name = Products;
@@ -288,7 +288,7 @@
 			);
 			name = "au-test";
 			productName = "au-test";
-			productReference = A9816B2C2450BCB000A3AA83 /* au-test.app */;
+			productReference = A9816B2C2450BCB000A3AA83 /* GainPlugin Standalone.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A9816B462450D71200A3AA83 /* appex */ = {
@@ -307,7 +307,7 @@
 			);
 			name = appex;
 			productName = appex;
-			productReference = A9816B472450D71200A3AA83 /* appex.appex */;
+			productReference = A9816B472450D71200A3AA83 /* GainPlugin.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		A9831AEB2452133E003C3E0C /* au-framework */ = {
@@ -607,7 +607,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "GainPlugin Standalone";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -627,7 +627,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "GainPlugin Standalone";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -646,7 +646,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test.appex";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GainPlugin;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -666,7 +666,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test.appex";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GainPlugin;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -692,7 +692,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-framework";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = au_framework;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -719,7 +719,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-framework";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = au_framework;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
