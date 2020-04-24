@@ -10,9 +10,10 @@
 
 #import <AVFoundation/AVFoundation.h>
 
-// Define parameter addresses.
+// MARK: Define parameter addresses. Any change here should be reflected in .h
 const AudioUnitParameterID gain = 0;
 
+// MARK: - Internal Interface properties
 @interface appexAudioUnit ()
 
 @property (nonatomic, readwrite) AUParameterTree *parameterTree;
@@ -20,7 +21,7 @@ const AudioUnitParameterID gain = 0;
 @property AUAudioUnitBusArray *outputBusArray;
 @end
 
-
+// MARK: - The AudioUnit implementation
 @implementation appexAudioUnit
 @synthesize parameterTree = _parameterTree;
 
@@ -51,8 +52,8 @@ const AudioUnitParameterID gain = 0;
 															  busses: @[_kernelAdapter.outputBus]];
 }
 
+// MARK: Create parameter objects. These are -not- the DSPKernel parameters.
 - (void)setupParameterTree {
-    // Create parameter objects.
     AUParameter *pGain = [AUParameterTree createParameterWithIdentifier:@"gain"
 																	name:@"Gain"
 																 address:gain
@@ -65,6 +66,7 @@ const AudioUnitParameterID gain = 0;
 													 dependentParameters:nil];
 
     // Initialize the parameter values.
+    // Remember to set its DSP equivalent value accordingly.
     pGain.value = 0.5;
 
     // Create the parameter tree.

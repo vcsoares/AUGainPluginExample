@@ -52,15 +52,16 @@ public class AudioUnitViewController: AUViewController {
     fileprivate func connectViewToAU() {
         print("[\(Date())] Entrando na função \t \(#function)")
         
-        // Get the parameter tree and add observers for any parameters that the UI needs to keep in sync with the AudioUnit
+        // Get the parameter tree and add observers for any parameters
+        // that the UI needs to keep in sync with the AudioUnit.
         guard let gain = audioUnit?.parameterTree?.parameter(withAddress: AUParameterAddress(gain)) else {
-            print("oops")
+            print("❌ Couldn't find required parameters in parameter tree.")
             return
         }
         
         gainParameter = gain
         
-        // Observe value changes made to the cutoff and resonance parameters.
+        // Observe value changes made to parameters.
         parameterObserverToken =
             audioUnit?.parameterTree?.token(byAddingParameterObserver: { [weak self] address, value in
                 guard let self = self else { return }

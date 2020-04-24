@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import au_framework
 
-// The AudioComponentDescription matching the AUv3FilterExtension Info.plist
+// The AudioComponentDescription matching the AppEx Info.plist
 private var componentDescription: AudioComponentDescription = {
 
     // Ensure that AudioUnit type, subtype, and manufacturer match the extension's Info.plist values

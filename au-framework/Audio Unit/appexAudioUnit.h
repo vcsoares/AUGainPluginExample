@@ -9,9 +9,10 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "appexDSPKernelAdapter.h"
 
-// Define parameter addresses.
+// MARK: Expose parameter addresses. Any change here should be reflected in .m
 extern const AudioUnitParameterID gain;
 
+// MARK: - The AudioUnit interface
 @interface appexAudioUnit : AUAudioUnit
 
 @property (nonatomic, readonly) appexDSPKernelAdapter *kernelAdapter;

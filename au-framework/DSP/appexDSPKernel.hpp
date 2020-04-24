@@ -11,7 +11,7 @@
 
 #import "DSPKernel.hpp"
 
-// MARK: - PARAMETER ENUM
+// MARK: - INTERNAL PARAMETER ENUM
 
 enum {
     pGain = 0,

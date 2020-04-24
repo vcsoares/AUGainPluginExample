@@ -26,6 +26,8 @@
         
         // Create a DSP kernel to handle the signal processing.
         _kernel.init(format.channelCount, format.sampleRate);
+        
+        // Set default values for internal DSP parameters
         _kernel.setParameter(pGain, 0.5);
 
         // Create the input and output busses.
