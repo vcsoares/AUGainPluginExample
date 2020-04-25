@@ -7,7 +7,7 @@
 //
 
 import CoreAudioKit
-import au_framework
+import GainPluginFramework
 
 extension GainPluginViewController: AUAudioUnitFactory {
 
@@ -15,5 +15,6 @@ extension GainPluginViewController: AUAudioUnitFactory {
         audioUnit = try GainPluginAudioUnit(componentDescription: componentDescription, options: [])
         return audioUnit!
     }
+    
 }
 

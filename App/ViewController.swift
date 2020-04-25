@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-import au_framework
+import GainPluginFramework
 
 // The AudioComponentDescription matching the AppEx Info.plist
 private var componentDescription: AudioComponentDescription = {

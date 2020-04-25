@@ -18,12 +18,11 @@
 		A9816B572450D71200A3AA83 /* GainPluginDSPKernel.hpp in Resources */ = {isa = PBXBuildFile; fileRef = A9816B562450D71200A3AA83 /* GainPluginDSPKernel.hpp */; };
 		A9816B642450D71200A3AA83 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9816B622450D71200A3AA83 /* MainInterface.storyboard */; };
 		A9816B682450D71200A3AA83 /* GainPlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A9816B472450D71200A3AA83 /* GainPlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A9831AF02452133E003C3E0C /* au_framework.h in Headers */ = {isa = PBXBuildFile; fileRef = A9831AEE2452133E003C3E0C /* au_framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9831AF32452133E003C3E0C /* au_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* au_framework.framework */; };
-		A9831AF42452133E003C3E0C /* au_framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* au_framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9831AF32452133E003C3E0C /* GainPluginFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* GainPluginFramework.framework */; };
+		A9831AF42452133E003C3E0C /* GainPluginFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* GainPluginFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9831AF92452140D003C3E0C /* GainPluginDSPKernelAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = A9816B552450D71200A3AA83 /* GainPluginDSPKernelAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9831AFB245214B9003C3E0C /* au_framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* au_framework.framework */; };
-		A9831AFC245214B9003C3E0C /* au_framework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* au_framework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9831AFB245214B9003C3E0C /* GainPluginFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* GainPluginFramework.framework */; };
+		A9831AFC245214B9003C3E0C /* GainPluginFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9831AEC2452133E003C3E0C /* GainPluginFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9831B0324521562003C3E0C /* GainPluginAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = A9816B4B2450D71200A3AA83 /* GainPluginAudioUnit.m */; };
 		A9831B0424521565003C3E0C /* GainPluginDSPKernelAdapter.mm in Sources */ = {isa = PBXBuildFile; fileRef = A9816B582450D71200A3AA83 /* GainPluginDSPKernelAdapter.mm */; };
 		A9831B0524521569003C3E0C /* DSPKernel.mm in Sources */ = {isa = PBXBuildFile; fileRef = A9816B512450D71200A3AA83 /* DSPKernel.mm */; };
@@ -31,8 +30,9 @@
 		A9831B07245215A0003C3E0C /* GainPluginDSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A9816B562450D71200A3AA83 /* GainPluginDSPKernel.hpp */; };
 		A9831B08245215A6003C3E0C /* DSPKernel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A9816B4F2450D71200A3AA83 /* DSPKernel.hpp */; };
 		A9831B09245215AA003C3E0C /* BufferedAudioBus.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A9816B532450D71200A3AA83 /* BufferedAudioBus.hpp */; };
-		A9831B0A245215DB003C3E0C /* GainPluginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9816B5B2450D71200A3AA83 /* GainPluginViewController.swift */; };
 		A9831B0C2452187F003C3E0C /* GainPluginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9831B0B2452187F003C3E0C /* GainPluginViewController.swift */; };
+		A9C055D12453C37C0002E1F7 /* GainPluginFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = A9831AEE2452133E003C3E0C /* GainPluginFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9C055D22453C3DB0002E1F7 /* GainPluginViewController+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9816B5B2450D71200A3AA83 /* GainPluginViewController+Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A9831AF42452133E003C3E0C /* au_framework.framework in Embed Frameworks */,
+				A9831AF42452133E003C3E0C /* GainPluginFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,7 +88,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A9831AFC245214B9003C3E0C /* au_framework.framework in Embed Frameworks */,
+				A9831AFC245214B9003C3E0C /* GainPluginFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,11 +113,11 @@
 		A9816B552450D71200A3AA83 /* GainPluginDSPKernelAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GainPluginDSPKernelAdapter.h; sourceTree = "<group>"; };
 		A9816B562450D71200A3AA83 /* GainPluginDSPKernel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GainPluginDSPKernel.hpp; sourceTree = "<group>"; };
 		A9816B582450D71200A3AA83 /* GainPluginDSPKernelAdapter.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GainPluginDSPKernelAdapter.mm; sourceTree = "<group>"; };
-		A9816B5B2450D71200A3AA83 /* GainPluginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GainPluginViewController.swift; sourceTree = "<group>"; };
+		A9816B5B2450D71200A3AA83 /* GainPluginViewController+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GainPluginViewController+Factory.swift"; sourceTree = "<group>"; };
 		A9816B632450D71200A3AA83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		A9816B652450D71200A3AA83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9831AEC2452133E003C3E0C /* au_framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = au_framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9831AEE2452133E003C3E0C /* au_framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = au_framework.h; sourceTree = "<group>"; };
+		A9831AEC2452133E003C3E0C /* GainPluginFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GainPluginFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9831AEE2452133E003C3E0C /* GainPluginFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GainPluginFramework.h; sourceTree = "<group>"; };
 		A9831AEF2452133E003C3E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9831B0B2452187F003C3E0C /* GainPluginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GainPluginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9831AF32452133E003C3E0C /* au_framework.framework in Frameworks */,
+				A9831AF32452133E003C3E0C /* GainPluginFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9831AFB245214B9003C3E0C /* au_framework.framework in Frameworks */,
+				A9831AFB245214B9003C3E0C /* GainPluginFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +165,7 @@
 			children = (
 				A9816B2C2450BCB000A3AA83 /* GainPlugin Standalone.app */,
 				A9816B472450D71200A3AA83 /* GainPlugin.appex */,
-				A9831AEC2452133E003C3E0C /* au_framework.framework */,
+				A9831AEC2452133E003C3E0C /* GainPluginFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 		A9816B5A2450D71200A3AA83 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A9816B5B2450D71200A3AA83 /* GainPluginViewController.swift */,
+				A9816B5B2450D71200A3AA83 /* GainPluginViewController+Factory.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 				A9831B0B2452187F003C3E0C /* GainPluginViewController.swift */,
 				A9816B492450D71200A3AA83 /* Audio Unit */,
 				A9816B4D2450D71200A3AA83 /* DSP */,
-				A9831AEE2452133E003C3E0C /* au_framework.h */,
+				A9831AEE2452133E003C3E0C /* GainPluginFramework.h */,
 				A9831AEF2452133E003C3E0C /* Info.plist */,
 			);
 			path = PluginFramework;
@@ -260,7 +260,7 @@
 			files = (
 				A9831AF92452140D003C3E0C /* GainPluginDSPKernelAdapter.h in Headers */,
 				A9831B08245215A6003C3E0C /* DSPKernel.hpp in Headers */,
-				A9831AF02452133E003C3E0C /* au_framework.h in Headers */,
+				A9C055D12453C37C0002E1F7 /* GainPluginFramework.h in Headers */,
 				A9831B07245215A0003C3E0C /* GainPluginDSPKernel.hpp in Headers */,
 				A9831B062452159E003C3E0C /* GainPluginAudioUnit.h in Headers */,
 				A9831B09245215AA003C3E0C /* BufferedAudioBus.hpp in Headers */,
@@ -325,7 +325,7 @@
 			);
 			name = PluginFramework;
 			productName = "au-framework";
-			productReference = A9831AEC2452133E003C3E0C /* au_framework.framework */;
+			productReference = A9831AEC2452133E003C3E0C /* GainPluginFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -415,7 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9831B0A245215DB003C3E0C /* GainPluginViewController.swift in Sources */,
+				A9C055D22453C3DB0002E1F7 /* GainPluginViewController+Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,13 +600,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VWQ6K2W3PY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vcsoares.gain;
 				PRODUCT_NAME = "GainPlugin Standalone";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
@@ -620,13 +620,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VWQ6K2W3PY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vcsoares.gain;
 				PRODUCT_NAME = "GainPlugin Standalone";
 				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
@@ -638,14 +638,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VWQ6K2W3PY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AppExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test.appex";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vcsoares.gain.appex;
 				PRODUCT_NAME = GainPlugin;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -658,14 +658,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VWQ6K2W3PY;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AppExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-test.appex";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vcsoares.gain.appex;
 				PRODUCT_NAME = GainPlugin;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -681,7 +681,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = VWQ6K2W3PY;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -692,8 +692,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-framework";
-				PRODUCT_NAME = au_framework;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.gain-framework";
+				PRODUCT_NAME = GainPluginFramework;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -709,7 +709,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = VWQ6K2W3PY;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -720,8 +720,8 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.au-framework";
-				PRODUCT_NAME = au_framework;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vcsoares.gain-framework";
+				PRODUCT_NAME = GainPluginFramework;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
