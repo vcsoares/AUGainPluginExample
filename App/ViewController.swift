@@ -27,7 +27,7 @@ private var componentDescription: AudioComponentDescription = {
 private let componentName = "Demo: GainPlugin"
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var auContainer: UIView!
     
     override func viewDidLoad() {
@@ -63,11 +63,11 @@ class ViewController: UIViewController {
             controller.didMove(toParent: self)
         }
     }
-
-
+    
 }
 
 public extension UIView {
+    
     func pinToSuperviewEdges() {
         guard let superview = superview else { return }
         translatesAutoresizingMaskIntoConstraints = false
@@ -78,4 +78,5 @@ public extension UIView {
             trailingAnchor.constraint(equalTo: superview.trailingAnchor)
         ])
     }
+    
 }

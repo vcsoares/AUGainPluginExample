@@ -1,6 +1,6 @@
 //
 //  AudioUnitViewController.swift
-//  au-framework
+//  GainPluginFramework
 //
 //  Created by Vinícius Chagas on 23/04/20.
 //  Copyright © 2020 Vinícius Chagas. All rights reserved.
@@ -15,20 +15,15 @@ public class GainPluginViewController: AUViewController {
     private var gainParameter: AUParameter!
     
     private var parameterObserverToken: AUParameterObserverToken?
+    private var isConnectedToAU: Bool = false
     
     public var audioUnit: GainPluginAudioUnit? {
         didSet {
             audioUnit?.viewController = self
 
-            if Thread.isMainThread {
+            Thread.performOnMain {
                 if self.isViewLoaded {
                     self.connectViewToAU()
-                }
-            } else {
-                DispatchQueue.main.async {
-                    if self.isViewLoaded {
-                        self.connectViewToAU()
-                    }
                 }
             }
         }
@@ -50,7 +45,12 @@ public class GainPluginViewController: AUViewController {
     }
     
     fileprivate func connectViewToAU() {
-        print("[\(Date())] Entrando na função \t \(#function)")
+        guard isConnectedToAU == false else {
+            print("Already connected to AU")
+            return
+        }
+        
+        print("\(#function)")
         
         // Get the parameter tree and add observers for any parameters
         // that the UI needs to keep in sync with the AudioUnit.
@@ -75,15 +75,30 @@ public class GainPluginViewController: AUViewController {
                 }
             })
         
+        self.isConnectedToAU = true
         updateUI()
-    }
-    
-    fileprivate func updateUI() {
-        paramLabel.text = "\(gainParameter.displayName): \(gainParameter.value)"
     }
     
     @IBAction func gainSliderValueChanged(_ sender: UISlider) {
         gainParameter.setValue(sender.value, originator: parameterObserverToken)
         updateUI()
     }
+    
+    fileprivate func updateUI() {
+        paramLabel.text = "\(gainParameter.displayName): \(gainParameter.value)"
+    }
+}
+
+public extension Thread {
+    
+    static func performOnMain(_ procedure: @escaping (() -> Void)) {
+        if Thread.isMainThread {
+            procedure()
+        } else {
+            DispatchQueue.main.async {
+                procedure()
+            }
+        }
+    }
+    
 }

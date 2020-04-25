@@ -1,13 +1,13 @@
 //
-//  appexDSPKernel.hpp
-//  appex
+//  GainPluginDSPKernel.hpp
+//  GainPluginFramework
 //
 //  Created by Vinícius Chagas on 22/04/20.
 //  Copyright © 2020 Vinícius Chagas. All rights reserved.
 //
 
-#ifndef appexDSPKernel_hpp
-#define appexDSPKernel_hpp
+#ifndef GainPluginDSPKernel_hpp
+#define GainPluginDSPKernel_hpp
 
 #import "DSPKernel.hpp"
 
@@ -18,7 +18,7 @@ enum {
 };
 
 /*
- appexDSPKernel
+ GainPluginDSPKernel
  Performs simple copying of the input signal to the output.
  As a non-ObjC class, this is safe to use from render thread.
  */
@@ -118,4 +118,4 @@ public:
     }
 };
 
-#endif /* appexDSPKernel_hpp */
+#endif /* GainPluginDSPKernel_hpp */
