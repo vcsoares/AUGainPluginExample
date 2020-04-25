@@ -349,7 +349,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9816B272450BCB000A3AA83 /* Build configuration list for PBXProject "au-test" */;
+			buildConfigurationList = A9816B272450BCB000A3AA83 /* Build configuration list for PBXProject "AUGainPluginExample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -733,7 +733,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9816B272450BCB000A3AA83 /* Build configuration list for PBXProject "au-test" */ = {
+		A9816B272450BCB000A3AA83 /* Build configuration list for PBXProject "AUGainPluginExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9816B3E2450BCB400A3AA83 /* Debug */,

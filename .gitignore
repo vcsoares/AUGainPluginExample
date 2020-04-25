@@ -109,12 +109,6 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-### SwiftPM ###
-Packages
-xcuserdata
-*.xcodeproj
-
-
 ### Xcode ###
 # Xcode
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
