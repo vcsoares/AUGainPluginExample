@@ -6,7 +6,7 @@
 //  Copyright © 2020 Vinícius Chagas. All rights reserved.
 //
 
-#import "appexAudioUnit.h"
+#import "GainPluginAudioUnit.h"
 
 #import <AVFoundation/AVFoundation.h>
 
@@ -14,7 +14,7 @@
 const AudioUnitParameterID gain = 0;
 
 // MARK: - Internal Interface properties
-@interface appexAudioUnit ()
+@interface GainPluginAudioUnit ()
 
 @property (nonatomic, readwrite) AUParameterTree *parameterTree;
 @property AUAudioUnitBusArray *inputBusArray;
@@ -22,7 +22,7 @@ const AudioUnitParameterID gain = 0;
 @end
 
 // MARK: - The AudioUnit implementation
-@implementation appexAudioUnit
+@implementation GainPluginAudioUnit
 @synthesize parameterTree = _parameterTree;
 
 - (instancetype)initWithComponentDescription:(AudioComponentDescription)componentDescription options:(AudioComponentInstantiationOptions)options error:(NSError **)outError {
@@ -30,7 +30,7 @@ const AudioUnitParameterID gain = 0;
     
     if (self == nil) { return nil; }
 
-	_kernelAdapter = [[appexDSPKernelAdapter alloc] init];
+	_kernelAdapter = [[GainPluginDSPKernelAdapter alloc] init];
 
 	self.maximumFramesToRender = _kernelAdapter.maximumFramesToRender;
 
@@ -75,7 +75,7 @@ const AudioUnitParameterID gain = 0;
 
 - (void)setupParameterCallbacks {
 	// Make a local pointer to the kernel to avoid capturing self.
-	__block appexDSPKernelAdapter * kernelAdapter = _kernelAdapter;
+	__block GainPluginDSPKernelAdapter * kernelAdapter = _kernelAdapter;
 
 	// implementorValueObserver is called when a parameter changes value.
 	_parameterTree.implementorValueObserver = ^(AUParameter *param, AUValue value) {

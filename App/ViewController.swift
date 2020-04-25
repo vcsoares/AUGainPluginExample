@@ -39,20 +39,20 @@ class ViewController: UIViewController {
         }
 
         let storyboard = UIStoryboard(name: "MainInterface", bundle: appexBundle)
-        guard let controller = storyboard.instantiateInitialViewController() as? AudioUnitViewController else {
+        guard let controller = storyboard.instantiateInitialViewController() as? GainPluginViewController else {
             fatalError("Unable to instantiate AudioUnitViewController")
         }
         
-        AUAudioUnit.registerSubclass(appexAudioUnit.self,
+        AUAudioUnit.registerSubclass(GainPluginAudioUnit.self,
                                      as: componentDescription,
                                      name: componentName,
                                      version: UInt32.max)
 
         AVAudioUnit.instantiate(with: componentDescription) { audioUnit, error in
             guard error == nil, let audioUnit = audioUnit else {
-                fatalError("Could not instantiate audio unit: \(String(describing: error))")
+                fatalError("Could not instantiate AU: \(error!.localizedDescription))")
             }
-            controller.audioUnit = audioUnit.auAudioUnit as? appexAudioUnit
+            controller.audioUnit = audioUnit.auAudioUnit as? GainPluginAudioUnit
         }
         
         if let view = controller.view {

@@ -15,6 +15,6 @@ FOUNDATION_EXPORT double au_frameworkVersionNumber;
 FOUNDATION_EXPORT const unsigned char au_frameworkVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <au_framework/PublicHeader.h>
-#import "appexDSPKernelAdapter.h"
-#import "appexAudioUnit.h"
-@class AudioUnitViewController;
+@class GainPluginViewController;
+#import "GainPluginDSPKernelAdapter.h"
+#import "GainPluginAudioUnit.h"

@@ -22,7 +22,7 @@ enum {
  Performs simple copying of the input signal to the output.
  As a non-ObjC class, this is safe to use from render thread.
  */
-class appexDSPKernel : public DSPKernel {
+class GainPluginDSPKernel : public DSPKernel {
     // MARK: - Member Variables
 
 private:
@@ -37,7 +37,7 @@ public:
     
     // MARK: - Member Functions
 
-    appexDSPKernel() {}
+    GainPluginDSPKernel() {}
 
     void init(int channelCount, double inSampleRate) {
         chanCount = channelCount;
@@ -99,7 +99,7 @@ public:
             return;
         }
         
-        // Perform per sample dsp on the incoming float *in before asigning it to *out
+        // Perform per sample dsp on the incoming *in before asigning it to *out
         for (int channel = 0; channel < chanCount; ++channel) {
         
             // Get pointer to immutable input buffer and mutable output buffer

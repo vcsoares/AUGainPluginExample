@@ -8,7 +8,7 @@
 
 import CoreAudioKit
 
-public class AudioUnitViewController: AUViewController {
+public class GainPluginViewController: AUViewController {
     @IBOutlet weak var paramLabel: UILabel!
     @IBOutlet weak var gainSlider: UISlider!
     
@@ -16,7 +16,7 @@ public class AudioUnitViewController: AUViewController {
     
     private var parameterObserverToken: AUParameterObserverToken?
     
-    public var audioUnit: appexAudioUnit? {
+    public var audioUnit: GainPluginAudioUnit? {
         didSet {
             audioUnit?.viewController = self
 

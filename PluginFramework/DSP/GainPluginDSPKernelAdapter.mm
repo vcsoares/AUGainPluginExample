@@ -10,12 +10,13 @@
 #import <CoreAudioKit/AUViewController.h>
 #import "DSPKernel.hpp"
 #import "BufferedAudioBus.hpp"
-#import "appexDSPKernel.hpp"
-#import "appexDSPKernelAdapter.h"
+#import "GainPluginDSPKernel.hpp"
+#import "GainPluginDSPKernelAdapter.h"
 
-@implementation appexDSPKernelAdapter {
-    // C++ members need to be ivars; they would be copied on access if they were properties.
-    appexDSPKernel  _kernel;
+@implementation GainPluginDSPKernelAdapter {
+    // C++ members need to be ivars
+    // They would be copied on access if they were properties.
+    GainPluginDSPKernel  _kernel;
     BufferedInputBus _inputBus;
 }
 
@@ -85,7 +86,7 @@
      render, we're doing it wrong.
      */
     // Specify captured objects are mutable.
-    __block appexDSPKernel *state = &_kernel;
+    __block GainPluginDSPKernel *state = &_kernel;
     __block BufferedInputBus *input = &_inputBus;
 
     return ^AUAudioUnitStatus(AudioUnitRenderActionFlags 				*actionFlags,

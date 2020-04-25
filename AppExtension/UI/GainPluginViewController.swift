@@ -9,10 +9,10 @@
 import CoreAudioKit
 import au_framework
 
-extension AudioUnitViewController: AUAudioUnitFactory {
+extension GainPluginViewController: AUAudioUnitFactory {
 
     public func createAudioUnit(with componentDescription: AudioComponentDescription) throws -> AUAudioUnit {
-        audioUnit = try appexAudioUnit(componentDescription: componentDescription, options: [])
+        audioUnit = try GainPluginAudioUnit(componentDescription: componentDescription, options: [])
         return audioUnit!
     }
 }

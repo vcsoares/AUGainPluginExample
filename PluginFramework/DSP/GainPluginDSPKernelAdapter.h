@@ -8,11 +8,11 @@
 
 #import <AudioToolbox/AudioToolbox.h>
 
-@class AudioUnitViewController;
+@class GainPluginViewController;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface appexDSPKernelAdapter : NSObject
+@interface GainPluginDSPKernelAdapter : NSObject
 
 @property (nonatomic) AUAudioFrameCount maximumFramesToRender;
 @property (nonatomic, readonly) AUAudioUnitBus *inputBus;

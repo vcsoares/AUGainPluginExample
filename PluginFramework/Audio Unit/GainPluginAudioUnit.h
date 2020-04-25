@@ -7,16 +7,16 @@
 //
 
 #import <AudioToolbox/AudioToolbox.h>
-#import "appexDSPKernelAdapter.h"
+#import "GainPluginDSPKernelAdapter.h"
 
 // MARK: Expose parameter addresses. Any change here should be reflected in .m
 extern const AudioUnitParameterID gain;
 
 // MARK: - The AudioUnit interface
-@interface appexAudioUnit : AUAudioUnit
+@interface GainPluginAudioUnit : AUAudioUnit
 
-@property (nonatomic, readonly) appexDSPKernelAdapter *kernelAdapter;
-@property (weak) AudioUnitViewController *viewController;
+@property (nonatomic, readonly) GainPluginDSPKernelAdapter *kernelAdapter;
+@property (weak) GainPluginViewController *viewController;
 - (void)setupAudioBuses;
 - (void)setupParameterTree;
 - (void)setupParameterCallbacks;
